@@ -6,15 +6,13 @@ using UnityEngine.SceneManagement;
 public class SceneLoader : MonoBehaviour
 {
     private int currentSceneIndex;
-    private string currentSceneName;
     // Start is called before the first frame update
     void Start()
     {
         currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
-        currentSceneName  = SceneManager.GetActiveScene().name;
     }
 
-    public void ChangeScene()
+    public void NextLevel()
     {
         SceneManager.LoadScene(currentSceneIndex + 1);
     }
